@@ -33,7 +33,7 @@ def motivate_image(image, motivation, motivation_size, description, description_
             text_padding * 2 + bordered_image.size[1]
     background_image_size = (background_image_width, background_image_height)
 
-    background_image = Image.new('RGB', background_image_size, 'black')
+    background_image = Image.new('RGB', background_image_size, 'blue')
 
     # Figure out where to center our text
     motivation_left_buffer = (background_image_width / 2) - (motivation_size[0] / 2)
@@ -48,12 +48,12 @@ def motivate_image(image, motivation, motivation_size, description, description_
     dr.text((motivation_left_buffer, motivation_bottom_buffer),
             motivation,
             font=motivation_font,
-            fill='#FFFFFF')
+            fill='#00ADF7')
 
     dr.text((description_left_buffer, description_bottom_buffer),
             description,
             font=description_font,
-            fill='#FFFFFF')
+            fill='#8BA3C2')
 
     # Paste our original image onto the background with text
     background_image.paste(bordered_image, (0, 0))
