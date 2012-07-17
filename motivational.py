@@ -14,7 +14,7 @@ parser.add_argument('--description-size', '-ds', dest='description_size', type=i
 args = parser.parse_args()
 
 def motivate_image(image, motivation, motivation_size, description, description_size):
-    border_size = 35
+    border_size = 25
     text_padding = 15
 
     # Get the image from the args
@@ -22,8 +22,8 @@ def motivate_image(image, motivation, motivation_size, description, description_
     bordered_image = ImageOps.expand(motivational_image, border=border_size, fill=0)
 
     # Fun with fonts
-    motivation_font = ImageFont.truetype('Glegoo-Regular.ttf', motivation_size)
-    description_font = ImageFont.truetype('Glegoo-Regular.ttf', description_size)
+    motivation_font = ImageFont.truetype('Rokkitt-Regular.ttf', motivation_size)
+    description_font = ImageFont.truetype('Rokkitt-Regular.ttf', description_size)
     motivation_size = motivation_font.getsize(motivation)
     description_size = description_font.getsize(description)
 
